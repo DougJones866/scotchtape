@@ -1,0 +1,43 @@
+nav {
+    font-family:'Courier New', Courier, monospace
+
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+li {
+    padding: 5px;
+    
+}
+
+a {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+  }
+
+
+.border {
+    border-style: solid;
+    border-width: thin;
+    margin-left: 500px;
+    margin-right: 500px;
+    display: flex;
+    align-content: center;
+    
+
+}

@@ -1,0 +1,17 @@
+/* .border {
+    border-top: solid;
+    border-width: thin;
+    margin-left: 500px;
+    margin-right: 500px;
+    display: flex;
+    align-content: center;
+} */
+
+footer {
+
+    border-top: solid;
+    border-width: thin;
+    margin-left: 500px;
+    margin-right: 500px;
+    position: absolute; 
+}
