@@ -1,4 +1,4 @@
-import './Goats.css'
+import styles from './Goats.module.css'
 
 
 const Goats = () => {
@@ -6,7 +6,7 @@ const Goats = () => {
 
 
     return (
-        <div>
+        <div className={styles.container}>
         <h1>Goats Go Here</h1>
         </div>
     )

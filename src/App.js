@@ -4,7 +4,7 @@ import About from "./components/About";
 import Goats from "./components/Goats";
 import Gallery from "./components/Gallery";
 // import Footer from './components/UI/Footer';
-import "./App.css";
+import "./App.module.css";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
