@@ -1,9 +1,12 @@
 import './Home.css'
+import eat from "../assets/images/eat.gif";
 
 const Home = () => {
     return (
         <div>
-        <h1>Home</h1>
+
+        <img src={eat} alt="van eat" />
+
         </div>
     )
 }
