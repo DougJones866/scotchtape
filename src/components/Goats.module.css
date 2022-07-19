@@ -1,3 +1,8 @@
 div {
     text-align: center;
 }
+
+.goats img {
+    height: 300px;
+    width: auto;
+}

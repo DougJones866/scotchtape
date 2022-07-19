@@ -1,4 +1,7 @@
 import styles from './Goats.module.css'
+import goat from "../assets/images/goat.gif";
+import { Fragment } from 'react';
+
 
 
 const Goats = () => {
@@ -6,9 +9,13 @@ const Goats = () => {
 
 
     return (
-        <div className={styles.container}>
-        <h1>Goats Go Here</h1>
+        <Fragment>
+            <h1>It's the placeholder goat!</h1>
+        <div className={styles.goats}>
+              <img src={goat} alt="goat thrust" />
+
         </div>
+        </Fragment>
     )
 }
 
