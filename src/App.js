@@ -6,10 +6,12 @@ import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Footer from './components/UI/Footer';
 import "./App.module.css";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faBatteryHalf, faBatteryFull, faPrint } from "@fortawesome/free-solid-svg-icons";
+import { Fragment } from 'react';
+
 
 library.add(fab, faBatteryHalf, faBatteryFull, faPrint);
 
@@ -17,7 +19,7 @@ library.add(fab, faBatteryHalf, faBatteryFull, faPrint);
 function App() {
 
   return (
-    <div>
+    <Fragment>
       
       <Navbar />
       <div>
@@ -28,15 +30,15 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
 
-          <Route
+          {/* <Route
         path="*"
         element={<Navigate to="/" replace />}
-    />
+    /> */}
         
         </Routes>
       </div>
       <Footer />
-    </div>
+    </Fragment>
   );
 }
 
