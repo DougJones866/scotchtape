@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/scotchtape/static/css/main.756e10dc.css",
-    "main.js": "/scotchtape/static/js/main.ea1f36a0.js",
-    "static/js/787.8ba0c85c.chunk.js": "/scotchtape/static/js/787.8ba0c85c.chunk.js",
+    "main.css": "/scotchtape/static/css/main.8bad473e.css",
+    "main.js": "/scotchtape/static/js/main.d1d831f0.js",
     "static/media/eat.gif": "/scotchtape/static/media/eat.ae64e73ce5ae128c6433.gif",
     "static/media/hapr.jpg": "/scotchtape/static/media/hapr.c653be90e0c2e851b082.jpg",
     "static/media/hmar.jpg": "/scotchtape/static/media/hmar.6816c044d63a1b0d3fcd.jpg",
@@ -10,12 +9,11 @@
     "static/media/hfeb.jpg": "/scotchtape/static/media/hfeb.5c3d6876d490c990e858.jpg",
     "static/media/hjan.jpg": "/scotchtape/static/media/hjan.e9698cdefe40611f29e1.jpg",
     "index.html": "/scotchtape/index.html",
-    "main.756e10dc.css.map": "/scotchtape/static/css/main.756e10dc.css.map",
-    "main.ea1f36a0.js.map": "/scotchtape/static/js/main.ea1f36a0.js.map",
-    "787.8ba0c85c.chunk.js.map": "/scotchtape/static/js/787.8ba0c85c.chunk.js.map"
+    "main.8bad473e.css.map": "/scotchtape/static/css/main.8bad473e.css.map",
+    "main.d1d831f0.js.map": "/scotchtape/static/js/main.d1d831f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.756e10dc.css",
-    "static/js/main.ea1f36a0.js"
+    "static/css/main.8bad473e.css",
+    "static/js/main.d1d831f0.js"
   ]
 }
