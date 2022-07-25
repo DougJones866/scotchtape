@@ -1,9 +1,11 @@
-import "./Footer.css";
+import "./Footer.module.css";
 
 const Footer = () => {
   return (
     <div>
-      <footer>dd</footer>
+      <footer>
+        <p>ScotchTapeOfficial</p>
+      </footer>
     </div>
   );
 };
