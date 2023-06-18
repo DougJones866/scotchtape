@@ -4,7 +4,7 @@
     </header> -->
     <div class="about">
       <div class="profile">
-        <img src="/assets/images/pgoat.png" alt="profile" />
+        <img src="/assets/images/scotch.jpg" alt="profile" />
       </div>
       <div class="info">
         <h3 class="aboutpage">
