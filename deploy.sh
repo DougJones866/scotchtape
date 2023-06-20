@@ -13,7 +13,7 @@ cd dist
 echo 'www.scotchtapeofficial.com' > CNAME
 
 git init
-git checkout -b main
+git checkout -b Main
 git add -A
 git commit -m 'deploy'
 

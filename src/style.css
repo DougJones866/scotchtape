@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  cursor: url(/assets/cursor.gif), auto;
+}
+
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

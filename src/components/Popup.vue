@@ -5,13 +5,9 @@
         <div class="htitle"><h3>Title Goes Here</h3></div>
         <div @click="isActive = !isActive" class="xbutton"><h1>X</h1></div>
       </div>
-      <!--       <div class="btmbar">
-          <div class="ybutton"><h1>X</h1></div>
-        </div> -->
 
-        <img class="van" src="/assets/images/van.gif" />
+      <img class="van" src="/assets/images/van.gif" />
     </div>
-    <!-- <button @click="isActive = !isActive">Open</button> -->
   </div>
 </template>
 
@@ -25,10 +21,7 @@ export default {
 };
 </script>
 
-<!-- Use preprocessors via the lang attribute! e.g. <style lang="scss"> -->
 <style scoped>
-
-
 button {
   padding: 25px 25px;
   border: none;
@@ -52,24 +45,6 @@ button {
   position: relative;
   text-align: center;
 }
-.btmbar {
-  background-color: rgb(120, 68, 242);
-  background-color: linear-gradient(
-    90deg,
-    rgba(120, 68, 242, 1) 51%,
-    rgba(206, 149, 241, 1) 100%
-  );
-  border-top: ridge 12px;
-  border-color: rgb(120, 68, 242);
-  border-color: linear-gradient(
-    90deg,
-    rgba(120, 68, 242, 1) 51%,
-    rgba(206, 149, 241, 1) 100%
-  );
-  height: 25px;
-
-  text-align: center;
-}
 
 .xbutton {
   display: inline-block;
@@ -89,24 +64,6 @@ button {
 }
 .xbutton:hover {
   border: pink ridge 12px;
-}
-
-.ybutton {
-  text-align: center;
-  display: inline-block;
-  line-height: 0;
-  background: orangered;
-  left: 0;
-  bottom: 0;
-  width: 50px;
-  border: ridge 10px;
-  position: absolute;
-  border-color: rgb(120, 68, 242);
-  border-color: linear-gradient(
-    90deg,
-    rgba(120, 68, 242, 1) 51%,
-    rgba(206, 149, 241, 1) 100%
-  );
 }
 
 .htitle {
@@ -146,15 +103,13 @@ button {
 }
 
 .van {
-    height: 240px;
+  height: 240px;
 }
 
 @media only screen and (max-width: 500px) {
-    .contentbox {
-        width: 50vh;
-        height: auto;
-  
-    }
-
+  .contentbox {
+    width: 50vh;
+    height: auto;
+  }
 }
 </style>

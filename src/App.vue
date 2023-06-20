@@ -18,7 +18,7 @@
  <style>
  * {
    box-sizing: border-box;
-   cursor: url(./assets/cursor.gif), auto;
+   cursor: url(/assets/cursor.gif), auto;
  }
  html {
    font-family: "Courier New", Courier, monospace;
