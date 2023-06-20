@@ -6,6 +6,7 @@
             <li>
               <div class="logo">
                 <p>ScotchTapeOfficial</p>
+                <!-- <img src="/assets/images/eyes.png"/> -->
               </div>
             </li>
             <li>
@@ -51,11 +52,19 @@
     margin: 20px;
   }
   .logo {
-    border-style: solid;
+    border: thin solid;
     margin: 15px;
     padding: 10px;
-    border-width: thin;
     text-align: center;
+    position: relative;
+    
+  }
+  
+  .logo img {
+    width: 300px;
+    height: auto;
+    z-index: -1;
+    
   }
   nav ul {
     list-style: none;

@@ -1,10 +1,10 @@
 <template>
   <!-- <div class="routing" v-if="this.$route.path !== '/goats'"> -->
    <div class="routing">
-     <the-header />
-     
+     <!-- <the-header /> -->
+     <main-border />
      <!-- <marquee /> -->
-     <the-footer />
+     <!-- <the-footer /> -->
    </div>
      <router-view />
  </template>
@@ -32,7 +32,7 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    text-align: center;
-   margin-top: 60px;
+   /* margin-top: 60px; */
  }
  
  </style>

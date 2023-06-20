@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <div class="icon">
+      <button @click="isActive = !isActive"><img src="/assets/images/icon.jpg" alt="profile" /></button>
+    </div>
     <!-- <h3>Work In Progress</h3> -->
     <!-- <img src="../assets/images/eat.gif" alt="Van Eat"/> -->
     <!-- <div class="goat">
@@ -16,8 +19,8 @@
     <div class="profile">
       <img src="/assets/images/yagihip.gif" alt="profile" />
     </div>
-    <div class="mainContainer">
-      <!-- <new-entry @add-entry="addEntry"> </new-entry> -->
+    <!-- <div class="mainContainer">
+      <new-entry @add-entry="addEntry"> </new-entry>
       <blog-entry
         class="blog"
         v-for="entry in entries"
@@ -27,7 +30,8 @@
         :date="entry.date"
         :description="entry.description"
       />
-    </div>
+    </div> -->
+    <popup v-if="isActive "/>
   </div>
 </template>
 
@@ -35,6 +39,7 @@
 export default {
   data() {
     return {
+      isActive: true,
       entries: [
         {
           id: "1",
@@ -83,19 +88,24 @@ export default {
 }
 .profile img {
   flex: 1;
+  bottom: 8px;
+  left: 10px;
   max-width: 630px;
   height: auto;
   position: fixed;
   z-index: -1;
 }
+.icon button {
+  border: none;
+  background:none;
+}
+.icon button img:hover{
+  max-width: 110px;
+}
 
 .mainContainer {
   flex: 2;
   padding: 15px;
-
-  /* width:1900px; */
-  /* max-width: 697px; */
-  /* height: auto; */
 }
 @media only screen and (max-width: 500px) {
   .mainContainer {
@@ -108,7 +118,20 @@ export default {
     width: 100%;
     position: fixed;
     z-index: -1;
-    bottom: 5%;
+    bottom: 1%;
   }
+}
+
+.icon {
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  margin: 10px;
+}
+.icon img {
+  border-radius: 250px;
+  max-width: 100px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 </style>
