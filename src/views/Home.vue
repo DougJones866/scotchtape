@@ -1,70 +1,29 @@
 <template>
   <div class="container">
     <div class="icon">
-      <button @click="isActive = !isActive"><img src="/assets/images/icon.jpg" alt="profile" /></button>
+      <button @click="isActive = !isActive">
+        <img src="/assets/images/icon.jpg" alt="profile" />
+      </button>
     </div>
-    <!-- <h3>Work In Progress</h3> -->
-    <!-- <img src="../assets/images/eat.gif" alt="Van Eat"/> -->
-    <!-- <div class="goat">
-        <div v-if="noGoat">
-          <the-button  class="goatbtn" @click="noGoat = !noGoat" :btn-text="text" />
-        </div>
-        <div v-else>
-          <div>
-            <the-button class="goatbtn" @click="noGoat = !noGoat" :btn-text="text2" />
-          </div>
-          <img src="../assets/images/goatdance.gif" />
-        </div>
-      </div> -->
     <div class="profile">
       <img src="/assets/images/yagihip.gif" alt="profile" />
     </div>
-    <!-- <div class="mainContainer">
-      <new-entry @add-entry="addEntry"> </new-entry>
-      <blog-entry
-        class="blog"
-        v-for="entry in entries"
-        :key="entry.id"
-        :id="entry.id"
-        :title="entry.title"
-        :date="entry.date"
-        :description="entry.description"
-      />
-    </div> -->
-    <popup v-if="isActive "/>
+    <popup v-if="isActive" />
+    
+    <big-popup />
   </div>
 </template>
 
 <script>
+import BigPopup from '../components/UI/BigPopup.vue';
 export default {
+  components: { BigPopup },
   data() {
     return {
-      isActive: true,
-      entries: [
-        {
-          id: "1",
-          title: "Work in Progress",
-          date: "Aug 4th 2022",
-          description:
-            "One day there will be many things on this webpage. Just waiting till my creator wakes up and actually start to do some work",
-        },
-      ],
-      text: "Goat?",
-      text2: "No Goat!",
-      noGoat: true,
+      isActive: true,  
     };
   },
-  methods: {
-    addEntry(title, date, description) {
-      const newBlogEntry = {
-        id: new Date().toISOString(),
-        title: title,
-        date: date,
-        description: description,
-      };
-      this.entry.push(newBlogEntry);
-    },
-  },
+
 };
 </script>
 
@@ -95,11 +54,13 @@ export default {
   position: fixed;
   z-index: -1;
 }
+
+
 .icon button {
   border: none;
-  background:none;
+  background: none;
 }
-.icon button img:hover{
+.icon button img:hover {
   max-width: 110px;
 }
 

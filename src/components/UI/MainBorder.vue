@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="contentbox" v-if="isActive">
+    <div class="contentbox">
       <div class="headerbar">
         <div class="htitle"><h3>ScotchTapeOfficial</h3></div>
         <!-- <div @click="isActive = !isActive" class="xbutton"><h1>X</h1></div> -->
@@ -8,7 +8,9 @@
       <div class="navbar">
         <p>You Are Here!</p>
       </div>
-      <div class="minibox"></div>
+      <div class="minibox">
+        <img src="/assets/images/scotch.jpg" />
+      </div>
     </div>
   </div>
 </template>
@@ -17,7 +19,7 @@
 export default {
   data() {
     return {
-      isActive: true,
+      
     };
   },
 };
@@ -73,6 +75,7 @@ button {
 }
 
 .contentbox {
+  overflow: hidden;
   width: 100%;
   height: 100%;
   border: ridge 8px;
@@ -116,5 +119,13 @@ button {
     rgba(206, 149, 241, 1) 100%
   );
   
+}
+
+.minibox img {
+    
+    
+    width: 100%;
+    height: 100%;
+    
 }
 </style>

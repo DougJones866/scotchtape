@@ -1,21 +1,36 @@
 <template>
   <div id="app">
-    <div class="contentbox" v-if="isActive">
+    <div class="contentbox" v-if="isActive" >
+      <!-- <slot></slot> -->
       <div class="headerbar">
         <div class="htitle"><h3>Title Goes Here</h3></div>
         <div @click="isActive = !isActive" class="xbutton"><h1>X</h1></div>
       </div>
-
-      <img class="van" src="/assets/images/van.gif" />
+      <div v-for="image in images" :key="image.img">
+      <img class="van" :src="`./assets/images/${image.img}`" />
+    </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    mode: {
+      type: String,
+      required: false,
+      default: null,
+    },
+    
+  },
   data() {
     return {
       isActive: true,
+      images: [{
+        id: 1,
+        img: 'van.gif',
+        default: true,
+      }]
     };
   },
 };
@@ -72,6 +87,7 @@ button {
 }
 
 .contentbox {
+  position: relative;
   width: 500px;
   height: 300px;
   border: ridge 8px;
@@ -100,6 +116,25 @@ button {
   to {
     background-position: 100% 100%; /* end at bottom-right corner */
   }
+}
+
+.contentbox2 {
+  width: 500px;
+  height: 300px;
+  border: ridge 8px;
+  border-radius: 2%;
+  border-color: rgb(120, 68, 242);
+  border-color: linear-gradient(
+    90deg,
+    rgba(120, 68, 242, 1) 51%,
+    rgba(206, 149, 241, 1) 100%
+  );
+  position: relative;
+  display: inline-block;
+  top: 150px;
+
+  margin: 0;
+  
 }
 
 .van {
