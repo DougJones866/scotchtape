@@ -8,16 +8,17 @@
     <div class="profile">
       <img src="/assets/images/yagihip.gif" alt="profile" />
     </div>
-    <popup v-if="isActive" />
+    <popup v-if="isActive" img="van.gif" />
+    
     
     <big-popup />
   </div>
 </template>
 
 <script>
-import BigPopup from '../components/UI/BigPopup.vue';
+
 export default {
-  components: { BigPopup },
+ 
   data() {
     return {
       isActive: true,  
@@ -95,4 +96,6 @@ export default {
   height: auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+
 </style>

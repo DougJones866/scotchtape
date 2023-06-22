@@ -1,21 +1,21 @@
 <template>
   <div id="container">
     <div class="contentbox">
-      <slot></slot>
-      <div class="headerbar">
-        <div class="htitle"><h3>Title Goes Here</h3></div>
-        <div @click="isActive = !isActive" class="xbutton"><h1>X</h1></div>
+        <slot></slot>
+        <div class="headerbar">
+            <div class="htitle"><h3>Title Goes Here</h3></div>
+            <div @click="isActive = !isActive" class="xbutton"><h1>X</h1></div>
+            <bulletin />
       </div>
-      <div class="bulletin">
-        <h2>This Is a Website</h2>
-        <p>This is where information would go.</p>
-      </div>
+     
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
+  
   data() {
     return {
       isActive: true,
@@ -31,38 +31,7 @@ button {
   background: #0faf87;
 }
 
-.bulletin {
-    background-color: orangered;
-    border: ridge 8px;
-  border-color: rgb(120, 68, 242);
-  border-color: linear-gradient(
-    90deg,
-    rgba(120, 68, 242, 1) 51%,
-    rgba(206, 149, 241, 1) 100%
-    );
-    margin: 15px;
-}
-.bulletin:hover {
-    border: ridge 10px;
-  border-color: rgb(206, 68, 242);
-  border-color: linear-gradient(
-    90deg,
-    rgba(120, 68, 242, 1) 51%,
-    rgba(206, 149, 241, 1) 100%
-    );
-}
-.bulletin h2 {
-    padding-left: 25px;
-    text-align: left;
-    
-}
 
-.bulletin p {
-    background-color:#49F5FF;
-    padding-left: 25px;
-    text-align: left;
-
-}
 .headerbar {
   background-color: rgb(120, 68, 242);
   background-color: linear-gradient(

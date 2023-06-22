@@ -6,8 +6,8 @@
         <div class="htitle"><h3>Title Goes Here</h3></div>
         <div @click="isActive = !isActive" class="xbutton"><h1>X</h1></div>
       </div>
-      <div v-for="image in images" :key="image.img">
-      <img class="van" :src="`./assets/images/${image.img}`" />
+      <div >
+      <img class="van" :src="`./assets/images/${img}`" />
     </div>
     </div>
   </div>
@@ -21,6 +21,8 @@ export default {
       required: false,
       default: null,
     },
+    img: String,
+
     
   },
   data() {

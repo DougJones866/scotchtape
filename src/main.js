@@ -8,6 +8,8 @@ import TheButton from './components/TheButton.vue';
 import MainBorder from './components/UI/MainBorder.vue';
 import Popup from './components/UI/Popup.vue'
 import BigPopup from './components/UI/BigPopup.vue'
+import Bulletin from './components/Bulletin.vue'
+import ButtonList from './components/UI/ButtonList.vue'
 // import TheCard from './components/TheCard.vue';
 // import BlogEntry from './components/BlogEntry.vue';
 // import NewEntry from './components/NewEntry.vue';
@@ -20,6 +22,8 @@ app.component('the-button', TheButton);
 app.component('main-border', MainBorder);
 app.component('popup', Popup);
 app.component('big-popup', BigPopup);
+app.component('bulletin', Bulletin);
+app.component('button-list', ButtonList);
 // app.component('the-card', TheCard);
 // app.component('blog-entry', BlogEntry);
 // app.component('new-entry', NewEntry);
