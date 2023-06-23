@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as o}from"./index-2eefa680.js";const n={setup(){}};function c(r,s,a,p,_,l){return t(),o("h1",null,"Looking to Contact Me? Well Find Me Here.")}const i=e(n,[["render",c]]);export{i as default};
