@@ -8,10 +8,11 @@
     <div class="profile">
       <img src="/assets/images/yagihip.gif" alt="profile" />
     </div>
-    <popup v-if="isActive" img="van.gif" />
-    
-    
+    <popup class="contentbox" v-if="isActive" img="van.gif" />
     <big-popup />
+    <popup class="contentbox2" v-if="isActive" img="yagi.png"><h1 class="test">Yagi</h1> </popup>
+    
+    
   </div>
 </template>
 
@@ -55,7 +56,10 @@ export default {
   position: fixed;
   z-index: -1;
 }
-
+.test {
+  z-index: 5;
+  color:black;
+}
 
 .icon button {
   border: none;

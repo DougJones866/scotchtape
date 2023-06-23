@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="contentbox" v-if="isActive" >
+    <div :class="theme" v-if="isActive" >
       <!-- <slot></slot> -->
       <div class="headerbar">
         <div class="htitle"><h3>Title Goes Here</h3></div>
@@ -22,19 +22,21 @@ export default {
       default: null,
     },
     img: String,
+    theme: String,
 
     
   },
   data() {
     return {
       isActive: true,
-      images: [{
-        id: 1,
-        img: 'van.gif',
-        default: true,
-      }]
+      
     };
   },
+  methods: {
+    close() {
+      this.$emit('isActive')
+    }
+  }
 };
 </script>
 
@@ -99,13 +101,12 @@ button {
     90deg,
     rgba(120, 68, 242, 1) 51%,
     rgba(206, 149, 241, 1) 100%
-  );
-  position: relative;
-  display: inline-block;
-  top: 150px;
-
-  margin: 0;
-  background-color: #101373; /* light blue background color */
+    );
+    position: relative;
+    display: inline-block;
+    top: 150px;
+    margin: 0;
+    background-color: #101373; /* light blue background color */
   background-image: linear-gradient(#3137f5 0.1rem, transparent 0.1rem),
     linear-gradient(90deg, #3137f5 0.1rem, transparent 0.1rem);
   background-size: 3rem 3rem; /* size of the grid squares */
@@ -120,9 +121,11 @@ button {
   }
 }
 
+
+
 .contentbox2 {
-  width: 500px;
-  height: 300px;
+  width: 550px;
+  height: 450px;
   border: ridge 8px;
   border-radius: 2%;
   border-color: rgb(120, 68, 242);
@@ -134,9 +137,18 @@ button {
   position: relative;
   display: inline-block;
   top: 150px;
-
-  margin: 0;
   
+  margin: 0;
+  overflow: hidden;
+  
+  
+}
+.contentbox2 img {
+  height: 400px;
+  position:absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
 }
 
 .van {

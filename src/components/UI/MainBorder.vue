@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="contentbox">
+    <div id="mainbox" class="contentbox">
       <div class="headerbar">
         <div class="htitle"><h3>ScotchTapeOfficial</h3></div>
         <!-- <div @click="isActive = !isActive" class="xbutton"><h1>X</h1></div> -->
@@ -75,7 +75,7 @@ button {
 }
 
 .contentbox {
-  overflow: hidden;
+  
   width: 100%;
   height: 100%;
   border: ridge 8px;

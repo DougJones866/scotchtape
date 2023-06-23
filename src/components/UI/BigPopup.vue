@@ -113,6 +113,7 @@ button {
     width: 50vh;
     height: 50vh;
     left: 0;
+    overflow: scroll;
   }
 }
 </style>
