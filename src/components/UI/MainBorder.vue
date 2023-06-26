@@ -11,6 +11,7 @@
       <div class="minibox">
         <img src="/assets/images/scotch.jpg" />
       </div>
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -22,10 +23,16 @@ export default {
       
     };
   },
+  
 };
 </script>
 
 <style scoped>
+#app {
+  position: relative; /* Ensure the #app container is positioned */
+  
+}
+
 button {
   padding: 25px 25px;
   border: none;
@@ -75,11 +82,9 @@ button {
 }
 
 .contentbox {
-  
   width: 100%;
   height: 100%;
   border: ridge 8px;
-
   border-color: rgb(120, 68, 242);
   border-color: linear-gradient(
     90deg,
@@ -90,7 +95,7 @@ button {
 }
 
 .navbar {
-  overflow: hidden;
+  
   background: black;
   width: 100%;
   position: absolute;

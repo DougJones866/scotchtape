@@ -1,11 +1,6 @@
 <template>
-  <!-- <div class="routing" v-if="this.$route.path !== '/goats'"> -->
-  <main-border />
-
-  <!-- <the-header /> -->
-
-  <!-- <marquee /> -->
-  <!-- <the-footer /> -->
+  <nav-bar />
+  
   <router-view />
 </template>
 
@@ -17,5 +12,9 @@ export default {};
 body {
   margin: 0;
   background-color: #f5f3f9;
+  
+}
+.border {
+  
 }
 </style>

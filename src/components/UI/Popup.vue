@@ -1,14 +1,14 @@
 <template>
-  <div id="app">
-    <div :class="theme" v-if="isActive" >
-      <!-- <slot></slot> -->
+  <div id="app" >
+    <div :class="theme" >
       <div class="headerbar">
         <div class="htitle"><h3>Title Goes Here</h3></div>
-        <div @click="isActive = !isActive" class="xbutton"><h1>X</h1></div>
+        <!-- <h2>fdfdff</h2> -->
+        <div @click="$emit('close')" class="xbutton"><h1>X</h1></div>
       </div>
-      <div >
-      <img class="van" :src="`./assets/images/${img}`" />
-    </div>
+      <div>
+        <img class="van" :src="`./assets/images/${img}`" />
+      </div>
     </div>
   </div>
 </template>
@@ -23,20 +23,17 @@ export default {
     },
     img: String,
     theme: String,
-
-    
   },
   data() {
     return {
-      isActive: true,
-      
+      // isActive: true,
     };
   },
   methods: {
     close() {
-      this.$emit('isActive')
-    }
-  }
+      this.$emit("close", (this.isActive = !this.isActive));
+    },
+  },
 };
 </script>
 
@@ -65,6 +62,8 @@ button {
   text-align: center;
 }
 
+
+
 .xbutton {
   display: inline-block;
   line-height: 0;
@@ -90,10 +89,15 @@ button {
   line-height: 0;
 }
 
+#app {
+  display: inline-block;
+  position:relative;
+}
 .contentbox {
-  position: relative;
+  /* position: relative; */
+  z-index: 3;
   width: 500px;
-  height: 300px;
+  margin: 10px;
   border: ridge 8px;
   border-radius: 2%;
   border-color: rgb(120, 68, 242);
@@ -101,12 +105,8 @@ button {
     90deg,
     rgba(120, 68, 242, 1) 51%,
     rgba(206, 149, 241, 1) 100%
-    );
-    position: relative;
-    display: inline-block;
-    top: 150px;
-    margin: 0;
-    background-color: #101373; /* light blue background color */
+  );
+  background-color: #101373; /* light blue background color */
   background-image: linear-gradient(#3137f5 0.1rem, transparent 0.1rem),
     linear-gradient(90deg, #3137f5 0.1rem, transparent 0.1rem);
   background-size: 3rem 3rem; /* size of the grid squares */
@@ -121,10 +121,10 @@ button {
   }
 }
 
-
-
 .contentbox2 {
-  width: 550px;
+  position: relative;
+  margin: 10px;
+  z-index: 3;
   height: 450px;
   border: ridge 8px;
   border-radius: 2%;
@@ -134,21 +134,34 @@ button {
     rgba(120, 68, 242, 1) 51%,
     rgba(206, 149, 241, 1) 100%
   );
-  position: relative;
-  display: inline-block;
-  top: 150px;
-  
-  margin: 0;
+
   overflow: hidden;
-  
-  
 }
 .contentbox2 img {
-  height: 400px;
-  position:absolute;
-  z-index: -1;
-  left: 0;
-  bottom: 0;
+  width: 600px;
+  height: auto;
+  
+}
+.contentbox3 {
+  z-index: 3;
+  
+  width:500px;
+  height:500px;
+  margin: 10px;
+  border: ridge 8px;
+  border-radius: 2%;
+  border-color: rgb(120, 68, 242);
+  border-color: linear-gradient(
+    90deg,
+    rgba(120, 68, 242, 1) 51%,
+    rgba(206, 149, 241, 1) 100%
+  );
+  overflow: hidden;
+  
+}
+.contentbox3 img {
+  width: 100%;
+  height:auto;
 }
 
 .van {

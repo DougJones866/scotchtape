@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   cursor: url(/assets/cursor.gif), auto;
+  
 }
 
 html {
@@ -13,13 +14,31 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   /* margin-top: 60px; */
+  
 }
 
-#mainbox {
+body {
+  width: 100%;
+  height: 100%;
+  border: ridge 8px;
+  background-image: url('./assets/images/mainbackground.jpg');
+  background-size: cover;
+  border-color: rgb(120, 68, 242);
+  border-color: linear-gradient(
+    90deg,
+    rgba(120, 68, 242, 1) 51%,
+    rgba(206, 149, 241, 1) 100%
+  );
+  position: fixed;
   overflow: hidden;
+  z-index: 8;
+  
 
-
+  
 }
+
+
+
 
 
 /* :root {

@@ -1,31 +1,72 @@
 <template>
-  <div class="container">
+  <div class="maincontainer">
+
     <div class="icon">
       <button @click="isActive = !isActive">
         <img src="/assets/images/icon.jpg" alt="profile" />
       </button>
+      
     </div>
-    <div class="profile">
-      <img src="/assets/images/yagihip.gif" alt="profile" />
+    <div class="container">
+      <div class="mainbox"></div>
+      <big-popup />
+      <div class="popups">
+      <popup
+        class="contentbox"
+        v-if="isActive1"
+        img="van.gif"
+        @close="close1"
+      />
+      <popup
+        class="contentbox2"
+        v-if="isActive2"
+        img="yagi.png"
+        @close="close2"
+      >
+      </popup>
+      <popup
+        class="contentbox3"
+        v-if="isActive3"
+        img="yagihip.gif"
+        @close="close3"
+      >
+      <h1>Yagi</h1>
+      </popup>
     </div>
-    <popup class="contentbox" v-if="isActive" img="van.gif" />
-    <big-popup />
-    <popup class="contentbox2" v-if="isActive" img="yagi.png"><h1 class="test">Yagi</h1> </popup>
+      <!-- <div class="profile">
+        <img src="/assets/images/yagihip.gif" alt="profile" />
+      </div> -->
+    </div>
     
-    
+    <div class="iconbox">
+      <icon-list />
+    </div>
   </div>
+  
 </template>
 
 <script>
-
+import IconList from '../components/IconList.vue';
 export default {
- 
+  components: { IconList },
   data() {
     return {
-      isActive: true,  
+      isActive1: true,
+      isActive2: true,
+      isActive3: true,
     };
   },
-
+  methods: {
+    close1() {
+      this.isActive1 = !this.isActive1;
+    },
+    close2() {
+      this.isActive2 = !this.isActive2;
+    },
+    close3() {
+      this.isActive3 = !this.isActive3;
+    },
+  },
 };
 </script>
 
@@ -41,10 +82,20 @@ export default {
     min-height: 600px; */
   position: relative;
 }
-.container .profile .mainContainer {
-  align-items: center;
-  width: 100%;
+.popups {
+  display: inline-block;
 }
+.iconbox {
+  position:fixed;
+  bottom: 25px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+
+
 .profile {
 }
 .profile img {
@@ -54,25 +105,25 @@ export default {
   max-width: 630px;
   height: auto;
   position: fixed;
-  z-index: -1;
+  z-index: -3;
 }
-.test {
-  z-index: 5;
-  color:black;
+
+.icon {
+  z-index: 8;
+  top: 100px;
 }
+
 
 .icon button {
   border: none;
   background: none;
+  display: inline-block;
 }
 .icon button img:hover {
   max-width: 110px;
 }
 
-.mainContainer {
-  flex: 2;
-  padding: 15px;
-}
+
 @media only screen and (max-width: 500px) {
   .mainContainer {
     width: 100%;
@@ -100,6 +151,4 @@ export default {
   height: auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-
 </style>

@@ -25,12 +25,6 @@ export default {
 </script>
 
 <style scoped>
-button {
-  padding: 25px 25px;
-  border: none;
-  background: #0faf87;
-}
-
 
 .headerbar {
   background-color: rgb(120, 68, 242);
@@ -78,8 +72,7 @@ button {
 
 .contentbox {
     overflow: hidden;
-  top: 170px;
-    left: 15%;
+   
   width: 1000px;
   height: 600px;
   border: ridge 8px;
@@ -90,9 +83,9 @@ button {
     rgba(120, 68, 242, 1) 51%,
     rgba(206, 149, 241, 1) 100%
   );
-  position: relative;
-  display: inline-block;
-
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
   background-color: #101373; /* light blue background color */
   background-image: linear-gradient(#3137f5 0.1rem, transparent 0.1rem),
     linear-gradient(90deg, #3137f5 0.1rem, transparent 0.1rem);
